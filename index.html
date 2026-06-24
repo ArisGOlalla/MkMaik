@@ -6,7 +6,7 @@
   <title>MK MAIK · Frecuencia del Superviviente</title>
   <meta name="description" content="Web oficial de MK MAIK: música, historia, prensa, libro Frecuencia del Superviviente y contacto profesional.">
   <meta name="keywords" content="MK Maik, Frecuencia del Alma, Frecuencia del Superviviente, música, artista, Galicia, libro, prensa, eventos">
-  <meta name="author" content="MK MaIK">
+  <meta name="author" content="MK MAIK">
   <meta property="og:title" content="MK MAIK - Frecuencia del Alma">
   <meta property="og:description" content="La historia de un superviviente convertido en música, identidad y buena vibra.">
   <meta property="og:type" content="website">
@@ -22,7 +22,6 @@
       --black:#16181b;
       --gold:#c9972f;
       --yellow:#d8a51f;
-      --cream:#fff8d7;
       --brown:#6f3b27;
       --white:#f7f2e8;
     }
@@ -35,167 +34,83 @@
     .center{text-align:center}
     .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 
-    .topbar{
-      position:fixed;top:0;left:0;right:0;z-index:50;
-      height:74px;display:flex;align-items:center;justify-content:space-between;
-      padding:0 36px;background:rgba(20,22,24,.88);
-      backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)
-    }
-
+    .topbar{position:fixed;top:0;left:0;right:0;z-index:50;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;background:rgba(20,22,24,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
     .brand{font-family:Cinzel,serif;font-size:28px;font-weight:900;color:var(--gold);line-height:.8}
     .brand span{display:block;font-size:11px;letter-spacing:.4em}
     nav{display:flex;gap:26px;font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:#e7e0cf}
 
-    .hero{
-      min-height:100vh;
-      background:
-        linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.38)),
-        radial-gradient(circle at 75% 45%,rgba(201,151,47,.45),transparent 28%),
-        #111;
-      display:flex;align-items:center;justify-content:center;text-align:center;
-      padding:130px 20px 120px;
-    }
-
-    .eyebrow{
-      font-family:Bebas Neue,Anton,sans-serif;
-      text-transform:uppercase;letter-spacing:.35em;
-      color:var(--gold);font-size:15px
-    }
-
-    .hero h1{
-      font-family:Anton,sans-serif;
-      font-size:clamp(90px,18vw,250px);
-      line-height:.78;margin:22px 0;color:var(--gold);
-      letter-spacing:.04em;text-shadow:0 10px 0 rgba(0,0,0,.25)
-    }
-
+    .hero{min-height:100vh;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.38)),radial-gradient(circle at 75% 45%,rgba(201,151,47,.45),transparent 28%),#111;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 20px 120px}
+    .eyebrow{font-family:Bebas Neue,Anton,sans-serif;text-transform:uppercase;letter-spacing:.35em;color:var(--gold);font-size:15px}
+    .hero h1{font-family:Anton,sans-serif;font-size:clamp(90px,18vw,250px);line-height:.78;margin:22px 0;color:var(--gold);letter-spacing:.04em;text-shadow:0 10px 0 rgba(0,0,0,.25)}
     .hero h2{font-family:Cinzel,serif;font-size:clamp(26px,5vw,68px);margin:0}
     .lead{font-size:clamp(18px,2vw,24px);max-width:760px;margin:22px auto;color:#eee}
 
     .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:999px;padding:15px 26px;font-weight:900;
-      text-transform:uppercase;letter-spacing:.09em;border:0;cursor:pointer
-    }
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:15px 26px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;border:0;cursor:pointer}
     .btn.gold{background:var(--gold);color:#111}
     .btn.white{background:var(--white);color:#111}
     .btn.outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.35)}
 
     section{padding:120px 0}
-    h2.big, section h2{
-      font-family:Anton,sans-serif;
-      font-size:clamp(48px,8vw,115px);
-      line-height:.9;text-transform:uppercase;margin:10px 0 24px
-    }
+    h2.big, section h2{font-family:Anton,sans-serif;font-size:clamp(48px,8vw,115px);line-height:.9;text-transform:uppercase;margin:10px 0 24px}
 
-    .platforms{
-      display:flex;gap:34px;justify-content:center;align-items:center;flex-wrap:wrap;
-      padding:34px 20px;background:#232528;color:#bdbdbd;font-weight:800
-    }
+    .platforms{display:flex;gap:34px;justify-content:center;align-items:center;flex-wrap:wrap;padding:34px 20px;background:#232528;color:#bdbdbd;font-weight:800}
     .platforms a:hover{color:var(--gold)}
-
     .yellow{background:var(--yellow);color:#171717}
     .dark{color:#171717}
     .copy{max-width:720px;margin:15px auto 35px;line-height:1.7}
 
     .track-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-    .track{
-      background:#1f2023;color:var(--white);padding:26px;border-radius:24px;
-      border:3px solid #111;box-shadow:0 12px 0 rgba(0,0,0,.18)
-    }
+    .track{background:#1f2023;color:var(--white);padding:26px;border-radius:24px;border:3px solid #111;box-shadow:0 12px 0 rgba(0,0,0,.18)}
     .track span{color:var(--gold);text-transform:uppercase;letter-spacing:.26em;font-size:12px;font-weight:800}
     .track h3{font-family:Cinzel,serif;font-size:34px;margin:8px 0 14px}
     .track p{color:#ded7c7;line-height:1.6}
 
+    .bill-section{background:var(--yellow);text-align:center;padding:0 0 80px}
+    .bill-section img{max-width:650px;width:90%;transform:rotate(-4deg);filter:drop-shadow(0 18px 24px rgba(0,0,0,.25))}
+
     .sketch-section{background:#f2efe6;color:#151515}
     .sketch-section p{font-size:18px;line-height:1.75}
-
     .memory-collage{position:relative;min-height:620px}
-    .memory-photo{
-      position:absolute;margin:0;background:#fff;padding:12px 12px 42px;
-      box-shadow:16px 22px 0 rgba(0,0,0,.16);
-      border:1px solid rgba(0,0,0,.08)
-    }
-    .memory-photo img{
-      display:block;width:100%;height:100%;object-fit:cover;
-      filter:sepia(.12) contrast(1.03)
-    }
-    .memory-photo figcaption{
-      position:absolute;left:16px;right:16px;bottom:12px;
-      color:#111;font-family:Cinzel,serif;font-size:13px;line-height:1.2
-    }
+    .memory-photo{position:absolute;margin:0;background:#fff;padding:12px 12px 42px;box-shadow:16px 22px 0 rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.08)}
+    .memory-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:sepia(.12) contrast(1.03)}
+    .memory-photo figcaption{position:absolute;left:16px;right:16px;bottom:12px;color:#111;font-family:Cinzel,serif;font-size:13px;line-height:1.2}
     .memory-photo.father{width:48%;height:360px;left:0;top:24px;transform:rotate(-6deg)}
     .memory-photo.child{width:45%;height:330px;right:4%;top:0;transform:rotate(5deg)}
     .memory-photo.panda{width:48%;height:300px;left:26%;bottom:0;transform:rotate(-1deg)}
 
     .brown{background:var(--brown);color:#fff8d7}
-    .event-card{
-      margin:40px auto 0;width:min(720px,90vw);padding:70px 20px;
-      background:#202020;border-radius:22px;
-      font-family:Anton;font-size:55px;letter-spacing:.03em
-    }
+    .event-card{margin:40px auto 0;width:min(720px,90vw);padding:70px 20px;background:#202020;border-radius:22px;font-family:Anton;font-size:55px;letter-spacing:.03em}
 
     .press{background:#202124}
     .press p{max-width:850px;line-height:1.8;color:#cfcfcf}
-    .newspaper-feature{
-      display:grid;grid-template-columns:370px 1fr;gap:28px;align-items:center;
-      margin:38px 0 18px;padding:22px;border:1px solid rgba(201,151,47,.55);
-      border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(201,151,47,.08))
-    }
-    .newspaper-feature img{
-      width:100%;height:260px;object-fit:cover;border-radius:18px
-    }
-    .newspaper-feature span{
-      font-family:Bebas Neue,Anton,sans-serif;color:var(--gold);
-      letter-spacing:.28em;text-transform:uppercase;font-size:15px
-    }
-    .newspaper-feature strong{
-      display:block;font-family:Cinzel,serif;font-size:clamp(24px,3vw,38px);
-      line-height:1.08;margin:10px 0;color:#fff
-    }
+    .newspaper-feature{display:grid;grid-template-columns:370px 1fr;gap:28px;align-items:center;margin:38px 0 18px;padding:22px;border:1px solid rgba(201,151,47,.55);border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(201,151,47,.08))}
+    .newspaper-feature img{width:100%;height:260px;object-fit:cover;border-radius:18px}
+    .newspaper-feature span{font-family:Bebas Neue,Anton,sans-serif;color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:15px}
+    .newspaper-feature strong{display:block;font-family:Cinzel,serif;font-size:clamp(24px,3vw,38px);line-height:1.08;margin:10px 0;color:#fff}
     .newspaper-feature small{color:var(--gold);font-weight:900;text-transform:uppercase}
 
     .logos{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid rgba(201,151,47,.5);margin-top:36px}
-    .logos a{
-      min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;border:1px solid rgba(201,151,47,.25);
-      font-family:Cinzel;font-weight:800;color:#eee;padding:18px
-    }
+    .logos a{min-height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid rgba(201,151,47,.25);font-family:Cinzel;font-weight:800;color:#eee;padding:18px}
     .logos a:hover{background:rgba(201,151,47,.12);color:var(--gold)}
     .logos small{display:block;margin-top:8px;font-family:Inter,sans-serif;font-size:12px;color:#bfbfbf;font-weight:600}
 
     .fans-section{background:#202123;color:#f4efe6}
-    .fans-photo{
-      background:#f7f2e8;padding:18px 18px 54px;transform:rotate(-2deg);
-      box-shadow:0 22px 50px rgba(0,0,0,.35);max-width:430px
-    }
+    .fans-photo{background:#f7f2e8;padding:18px 18px 54px;transform:rotate(-2deg);box-shadow:0 22px 50px rgba(0,0,0,.35);max-width:430px}
     .fans-photo img{display:block;width:100%;height:auto}
     .fans-text p{font-size:18px;line-height:1.7;color:#d9d4ca}
     blockquote{color:var(--gold);font-family:Cinzel,serif;font-size:22px;line-height:1.35}
 
     .brands{background:#111;color:white}
     .brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}
-    .brand-grid article{
-      background:linear-gradient(135deg,rgba(0,0,0,.8),rgba(140,40,255,.16));
-      border:1px solid rgba(201,151,47,.45);border-radius:26px;padding:34px
-    }
+    .brand-grid article{background:linear-gradient(135deg,rgba(0,0,0,.8),rgba(140,40,255,.16));border:1px solid rgba(201,151,47,.45);border-radius:26px;padding:34px}
     .brand-grid h3{font-family:Cinzel;font-size:38px;margin:0 0 14px}
 
-    .superviviente{
-      position:relative;overflow:visible;
-      background:radial-gradient(circle at 50% 10%,rgba(140,40,255,.25),transparent 28%),#0a0a0b;
-      text-align:center
-    }
+    .superviviente{position:relative;overflow:visible;background:radial-gradient(circle at 50% 10%,rgba(140,40,255,.25),transparent 28%),#0a0a0b;text-align:center}
     .superviviente h2{color:var(--gold)}
     .chips{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
     .chips a{border:1px solid rgba(201,151,47,.55);border-radius:999px;padding:11px 18px;text-transform:uppercase;letter-spacing:.22em;font-size:12px}
-
-    .wax-seal-mk{
-      position:absolute;left:50%;bottom:-95px;width:260px;height:auto;
-      transform:translateX(-50%) rotate(-6deg);z-index:9;pointer-events:none;
-      filter:drop-shadow(0 22px 26px rgba(0,0,0,.34))
-    }
+    .wax-seal-mk{position:absolute;left:50%;bottom:-95px;width:260px;height:auto;transform:translateX(-50%) rotate(-6deg);z-index:9;pointer-events:none;filter:drop-shadow(0 22px 26px rgba(0,0,0,.34))}
 
     .book{background:linear-gradient(180deg,#18181b,#2a172f)}
     .book-image-link{display:block;width:min(380px,86vw);filter:drop-shadow(32px 32px 0 #090909)}
@@ -203,17 +118,10 @@
 
     .gallery{background:#202124}
     .polaroids{height:560px;position:relative;margin-top:40px}
-    .polaroid{
-      position:absolute;width:260px;background:#fff;padding:14px 14px 76px;
-      box-shadow:0 15px 30px rgba(0,0,0,.4)
-    }
+    .polaroid{position:absolute;width:260px;background:#fff;padding:14px 14px 76px;box-shadow:0 15px 30px rgba(0,0,0,.4)}
     .polaroid div{height:222px;overflow:hidden;background:#111}
     .polaroid img{width:100%;height:100%;object-fit:cover;display:block}
-    .polaroid span{
-      position:absolute;left:16px;right:16px;bottom:18px;
-      min-height:38px;display:flex;align-items:center;justify-content:center;
-      text-align:center;font-family:Cinzel,serif;font-size:12px;line-height:1.22;color:#111
-    }
+    .polaroid span{position:absolute;left:16px;right:16px;bottom:18px;min-height:38px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:Cinzel,serif;font-size:12px;line-height:1.22;color:#111}
     .p1{left:2%;top:60px;transform:rotate(-7deg)}
     .p2{left:27%;top:112px;transform:rotate(5deg)}
     .p3{right:27%;top:55px;transform:rotate(-4deg)}
@@ -223,7 +131,6 @@
     .email{display:inline-block;margin:20px 0 28px;font-size:clamp(24px,4vw,48px);font-family:Cinzel;color:var(--gold)}
     .social{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
     .social a{border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:12px 18px;text-transform:uppercase;letter-spacing:.12em}
-
     footer{padding:55px 20px;text-align:center;background:#141414;color:var(--gold);font-family:Cinzel}
 
     @media(max-width:850px){
@@ -285,35 +192,17 @@
     <h2 class="big dark">Las más escuchadas</h2>
     <p class="dark copy">Canciones que cuentan una vida. Escucha cada frecuencia en sus plataformas oficiales.</p>
   </div>
-
   <div class="track-grid wrap">
-    <article class="track">
-      <span>Single</span>
-      <h3>ROSE</h3>
-      <p>El inicio de una etapa artística marcada por la identidad y la superación.</p>
-      <a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20ROSE" target="_blank">Escuchar en Spotify</a>
-    </article>
-
-    <article class="track">
-      <span>Single</span>
-      <h3>Frecuencia</h3>
-      <p>Letra: Aris Gómez Olalla · Una historia real convertida en música.</p>
-      <a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20Frecuencia" target="_blank">Escuchar en Spotify</a>
-    </article>
-
-    <article class="track">
-      <span>Single</span>
-      <h3>One Of One</h3>
-      <a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20One%20Of%20One" target="_blank">Escuchar</a>
-    </article>
-
-    <article class="track">
-      <span>Single</span>
-      <h3>Crush</h3>
-      <a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20Crush" target="_blank">Escuchar</a>
-    </article>
+    <article class="track"><span>Single</span><h3>ROSE</h3><p>El inicio de una etapa artística marcada por la identidad y la superación.</p><a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20ROSE" target="_blank">Escuchar en Spotify</a></article>
+    <article class="track"><span>Single</span><h3>Frecuencia</h3><p>Letra: Aris Gómez Olalla · Una historia real convertida en música.</p><a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20Frecuencia" target="_blank">Escuchar en Spotify</a></article>
+    <article class="track"><span>Single</span><h3>One Of One</h3><a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20One%20Of%20One" target="_blank">Escuchar</a></article>
+    <article class="track"><span>Single</span><h3>Crush</h3><a class="btn gold" href="https://open.spotify.com/search/MK%20MAIK%20Crush" target="_blank">Escuchar</a></article>
   </div>
 </section>
+
+<div class="bill-section">
+  <img src="images/Billete mk maik.png" alt="Frecuencia del Superviviente">
+</div>
 
 <section id="origen" class="origin sketch-section">
   <div class="wrap two">
@@ -324,22 +213,10 @@
       <p>Su mensaje no nace de una pose: nace de una historia real. Del silencio nació su voz. De su voz, su legado.</p>
       <a href="#libro" class="btn outline">Leer la historia completa</a>
     </div>
-
     <div class="memory-collage">
-      <figure class="memory-photo father">
-        <img src="images/padre-adoptivo.jpg" alt="MK MAIK de niño junto a su padre adoptivo">
-        <figcaption>Mi padre adoptivo, el origen de una historia real.</figcaption>
-      </figure>
-
-      <figure class="memory-photo child">
-        <img src="images/mk-nino-retrato.jpg" alt="MK MAIK de niño en un retrato de infancia">
-        <figcaption>El niño que aprendió a callar.</figcaption>
-      </figure>
-
-      <figure class="memory-photo panda">
-        <img src="images/mk-nino-panda.jpg" alt="MK MAIK de niño sonriendo con un panda">
-        <figcaption>Antes de la música, ya existía la luz.</figcaption>
-      </figure>
+      <figure class="memory-photo father"><img src="images/padre-adoptivo.jpg" alt="MK MAIK de niño junto a su padre adoptivo"><figcaption>Mi padre adoptivo, el origen de una historia real.</figcaption></figure>
+      <figure class="memory-photo child"><img src="images/mk-nino-retrato.jpg" alt="MK MAIK de niño en un retrato de infancia"><figcaption>El niño que aprendió a callar.</figcaption></figure>
+      <figure class="memory-photo panda"><img src="images/mk-nino-panda.jpg" alt="MK MAIK de niño sonriendo con un panda"><figcaption>Antes de la música, ya existía la luz.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -359,7 +236,7 @@
     <p>La trayectoria de MK MAIK ha despertado el interés de medios de comunicación, emisoras de radio, plataformas audiovisuales y prensa escrita.</p>
 
     <a class="newspaper-feature" href="https://www.farodevigo.es/arousa/2026/05/29/mk-maik-nino-robado-vigo-130805119.html" target="_blank">
-      <img src="images/faro-vigo-mkmaik.jpg.jpg" alt="Artículo de Faro de Vigo sobre MK MAIK">
+      <img src="images/faro-vigo-mkmaik.jpg" alt="Artículo de Faro de Vigo sobre MK MAIK">
       <div>
         <span>Reportaje destacado</span>
         <strong>Faro de Vigo: de niño robado en Vigo a trabajar con el sello de Michael Jackson en Los Ángeles</strong>
@@ -388,9 +265,7 @@
 
 <section id="fans" class="fans-section">
   <div class="wrap two">
-    <div class="fans-photo">
-      <img src="images/mkmaik-fans-firma.jpg" alt="MK MAIK firmando a sus fans">
-    </div>
+    <div class="fans-photo"><img src="images/mkmaik-fans-firma.jpg" alt="MK MAIK firmando a sus fans"></div>
     <div class="fans-text">
       <p class="eyebrow">Fans · Comunidad · Propósito</p>
       <h2>Gracias por dar sentido a mi frecuencia</h2>
@@ -405,16 +280,8 @@
     <p class="eyebrow">Marcas</p>
     <h2>Marcas que han notado la autenticidad</h2>
     <div class="brand-grid">
-      <article>
-        <h3>Coca-Cola</h3>
-        <p>Mi contenido formó parte de conversaciones y publicaciones dentro del ecosistema digital de Coca-Cola.</p>
-        <a class="btn outline" href="https://www.instagram.com/p/DQHnU5Ok3sl/?img_index=1" target="_blank">Ver publicación</a>
-      </article>
-      <article>
-        <h3>Chamelo</h3>
-        <p>Reconocimiento e interacción por parte de una marca internacional vinculada a creatividad e innovación.</p>
-        <a class="btn outline" href="https://www.instagram.com/" target="_blank">Ver Chamelo</a>
-      </article>
+      <article><h3>Coca-Cola</h3><p>Mi contenido formó parte de conversaciones y publicaciones dentro del ecosistema digital de Coca-Cola.</p><a class="btn outline" href="https://www.instagram.com/p/DQHnU5Ok3sl/?img_index=1" target="_blank">Ver publicación</a></article>
+      <article><h3>Chamelo</h3><p>Reconocimiento e interacción por parte de una marca internacional vinculada a creatividad e innovación.</p><a class="btn outline" href="https://www.instagram.com/" target="_blank">Ver Chamelo</a></article>
     </div>
   </div>
 </section>
@@ -425,12 +292,7 @@
     <h2>Frecuencia del Superviviente</h2>
     <p>Un viaje real a través del silencio, el bullying, la búsqueda de identidad, la familia, la música y la transformación.</p>
     <div class="chips">
-      <a href="#origen">Silencio</a>
-      <a href="#origen">Bullying</a>
-      <a href="#origen">Identidad</a>
-      <a href="#origen">Superación</a>
-      <a href="#musica">Música</a>
-      <a href="#libro">Transformación</a>
+      <a href="#origen">Silencio</a><a href="#origen">Bullying</a><a href="#origen">Identidad</a><a href="#origen">Superación</a><a href="#musica">Música</a><a href="#libro">Transformación</a>
     </div>
   </div>
   <img class="wax-seal-mk" src="images/sello-cera-mk.png" alt="Sello de cera MK">
@@ -438,11 +300,7 @@
 
 <section id="libro" class="book">
   <div class="wrap two">
-    <div>
-      <a class="book-image-link" href="images/portada-libro.jpg" target="_blank">
-        <img src="images/portada-libro.jpg" alt="Portada del libro Frecuencia del Superviviente">
-      </a>
-    </div>
+    <div><a class="book-image-link" href="images/portada-libro.jpg" target="_blank"><img src="images/portada-libro.jpg" alt="Portada del libro Frecuencia del Superviviente"></a></div>
     <div>
       <p class="eyebrow">Libro</p>
       <h2>La historia que nunca pensé contar</h2>
