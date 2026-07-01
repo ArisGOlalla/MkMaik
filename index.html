@@ -285,18 +285,46 @@
             <span>✓ Posible edición firmada</span>
           </div>
         </div>
-        <form class="reserve-form" id="reserveForm">
-          <label>Nombre
-            <input type="text" name="nombre" placeholder="Tu nombre" required>
-          </label>
-          <label>Email
-            <input type="email" name="email" placeholder="tuemail@email.com" required>
-          </label>
-          <label>Mensaje opcional
-            <textarea name="mensaje" placeholder="Quiero pre-reservar Frecuencia del Superviviente"></textarea>
-          </label>
-          <button class="btn gold" type="submit">Enviar pre-reserva</button>
-        </form>
+        const reserveForm = document.getElementById("reserveForm");
+
+if (reserveForm){
+
+reserveForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const data=new FormData(this);
+
+const nombre=data.get("nombre");
+const email=data.get("email");
+const telefono=data.get("telefono");
+const mensaje=data.get("mensaje");
+
+const subject=encodeURIComponent("Nueva pre-reserva · Frecuencia del Superviviente");
+
+const body=encodeURIComponent(
+
+`NUEVA PRE-RESERVA
+
+Nombre:
+${nombre}
+
+Email:
+${email}
+
+Teléfono:
+${telefono}
+
+Mensaje:
+${mensaje}
+
+`);
+
+window.location.href=`mailto:info.artista@mkmaik.com?subject=${subject}&body=${body}`;
+
+});
+
+}
       </div>
     </section>
     <section class="gallery torn-top">
@@ -332,18 +360,46 @@
   </footer>
   <script src="script.js"></script>
   <script>
-    const reserveForm = document.getElementById('reserveForm');
-    if (reserveForm) {
-      reserveForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        const data = new FormData(reserveForm);
-        const nombre = encodeURIComponent(data.get('nombre'));
-        const email = encodeURIComponent(data.get('email'));
-        const mensaje = encodeURIComponent(data.get('mensaje') || 'Quiero pre-reservar Frecuencia del Superviviente');
-        const subject = encodeURIComponent('Pre-reserva libro Frecuencia del Superviviente');
-        const body = `Nombre: ${nombre}%0AEmail: ${email}%0A%0AMensaje:%0A${mensaje}`;
-        window.location.href = `mailto:info.artista@mkmaik.com?subject=${subject}&body=${body}`;
-      });
+  const reserveForm = document.getElementById("reserveForm");
+
+if (reserveForm){
+
+reserveForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const data=new FormData(this);
+
+const nombre=data.get("nombre");
+const email=data.get("email");
+const telefono=data.get("telefono");
+const mensaje=data.get("mensaje");
+
+const subject=encodeURIComponent("Nueva pre-reserva · Frecuencia del Superviviente");
+
+const body=encodeURIComponent(
+
+`NUEVA PRE-RESERVA
+
+Nombre:
+${nombre}
+
+Email:
+${email}
+
+Teléfono:
+${telefono}
+
+Mensaje:
+${mensaje}
+
+`);
+
+window.location.href=`mailto:info.artista@mkmaik.com?subject=${subject}&body=${body}`;
+
+});
+
+}
     }
   </script>
 </body>
