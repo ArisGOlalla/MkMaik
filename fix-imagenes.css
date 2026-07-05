@@ -1,0 +1,48 @@
+
+/* SOLO CORRECCIONES DE IMÁGENES - NO CAMBIA ENCABEZADO NI COLORES */
+
+.polaroid.p1 div {
+  background: #f7f2e8 !important;
+}
+
+.polaroid.p1 img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f7f2e8 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.memory-photo.father img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f7f2e8 !important;
+}
+
+.newspaper-feature {
+  grid-template-columns: 370px 1fr !important;
+}
+
+.newspaper-feature img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f7f2e8 !important;
+  padding: 10px !important;
+  width: 100% !important;
+}
+
+.polaroid.p4 img {
+  filter: grayscale(100%) contrast(1.08) brightness(1.02) !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+.polaroid span {
+  font-weight: inherit !important;
+}
+
+@media (max-width: 850px) {
+  .newspaper-feature {
+    grid-template-columns: 1fr !important;
+  }
+}

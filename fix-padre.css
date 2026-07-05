@@ -1,0 +1,10 @@
+
+/* Ajuste único: usar segunda imagen completa del padre adoptivo */
+.polaroid.p1 img{
+  object-fit: contain !important;
+  object-position: center center !important;
+  background:#f7f2e8 !important;
+}
+.polaroid.p1 div{
+  background:#f7f2e8 !important;
+}

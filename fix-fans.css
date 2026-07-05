@@ -1,0 +1,48 @@
+
+/* Apartado Fans - mantiene colores y estética actual */
+.fans-section{
+  background:#202123;
+  padding:90px 0;
+  color:#f4efe6;
+}
+.fans-wrap{
+  align-items:center;
+  gap:48px;
+}
+.fans-photo{
+  background:#f7f2e8;
+  padding:18px 18px 54px;
+  transform:rotate(-2deg);
+  box-shadow:0 22px 50px rgba(0,0,0,.35);
+  max-width:430px;
+}
+.fans-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+.fans-text h2{
+  font-family:Anton, Bebas Neue, sans-serif;
+  text-transform:uppercase;
+  font-size:clamp(42px,6vw,88px);
+  line-height:.9;
+  margin:8px 0 24px;
+  color:#f4efe6;
+}
+.fans-text p{
+  font-size:18px;
+  line-height:1.7;
+  color:#d9d4ca;
+}
+.fans-text blockquote{
+  margin-top:28px;
+  color:#d4a52c;
+  font-family:Cinzel,serif;
+  font-size:22px;
+  line-height:1.35;
+}
+@media(max-width:850px){
+  .fans-wrap{grid-template-columns:1fr!important}
+  .fans-photo{max-width:100%; transform:rotate(0deg)}
+}

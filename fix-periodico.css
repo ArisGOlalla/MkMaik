@@ -1,0 +1,10 @@
+/* SOLO AJUSTE IMAGEN DEL PERIÓDICO */
+.newspaper-feature img{
+  object-fit: cover !important;
+  object-position: center top !important;
+  padding: 0 !important;
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 14px !important;
+}
