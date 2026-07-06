@@ -381,7 +381,7 @@
     width:100% !important;
     height:auto !important;
     object-fit:cover !important;
-    object-position:center center !important;
+    object-position:center 50% !important;
     display:block !important;
     margin:0 auto !important;
   }
