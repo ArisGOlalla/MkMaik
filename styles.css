@@ -405,3 +405,8 @@
     font-weight:900 !important;
     letter-spacing:.08em;
 }
+label[for="telefono"]{
+    font-weight:900 !important;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
