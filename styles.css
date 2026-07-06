@@ -135,6 +135,7 @@
 @media(max-width:760px){
   .gallery .polaroid{padding-bottom:78px !important;}
   .gallery .polaroid div{height:250px !important;}
+  .gallery .polaroid div img{object-position:center 40% !important;}
   .gallery .polaroid span{font-size:12px !important;}
 }
 
