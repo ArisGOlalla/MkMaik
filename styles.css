@@ -395,3 +395,13 @@
     width:92vw !important;
   }
 }
+.reserve-form label{
+    font-weight:800 !important;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
+
+.reserve-form .btn.gold{
+    font-weight:900 !important;
+    letter-spacing:.08em;
+}
