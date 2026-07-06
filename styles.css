@@ -354,3 +354,24 @@
   }
 
 }
+/* ===== Corrección fotos libro en móvil ===== */
+
+@media (max-width:760px){
+
+  .stack-photos{
+      display:flex !important;
+      flex-direction:column !important;
+      align-items:center !important;
+  }
+
+  .stack-photos img{
+      width:100% !important;
+      max-width:360px !important;
+      height:auto !important;
+      object-fit:cover !important;
+      object-position:center center !important;
+      display:block !important;
+      margin:0 auto 20px !important;
+  }
+
+}
