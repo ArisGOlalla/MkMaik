@@ -204,7 +204,7 @@
   min-height:100vh !important;
   background:
     linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.45)),
-    url("assets/images/Fondo-iluminati.png") center top / cover no-repeat !important;
+    url("assets/images 3/Fondo-iluminati.png") center top / cover no-repeat !important;
   padding:120px 20px 160px !important;
 }
 .hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.02);pointer-events:none;z-index:0}
