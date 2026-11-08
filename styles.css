@@ -1110,3 +1110,70 @@ label[for="telefono"]{
   #musica .mobile-discography-page-link span{font-size:25px;line-height:1}
   #musica .mobile-discography-page-link:focus-visible{outline:3px solid #181818;outline-offset:3px}
 }
+
+
+/* Capítulo 0 — carrusel fotográfico táctil solo en móvil */
+.memory-swipe-hint{display:none}
+@media (max-width:760px){
+  #origen .memory-collage{
+    display:flex !important;
+    position:relative !important;
+    align-items:stretch !important;
+    gap:14px !important;
+    min-height:0 !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:6px;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    padding:12px 7px 20px !important;
+    scrollbar-width:thin;
+    scrollbar-color:#c79b3e transparent;
+  }
+  #origen .memory-collage .memory-photo{
+    display:flex !important;
+    flex:0 0 83% !important;
+    flex-direction:column !important;
+    position:relative !important;
+    width:83% !important;
+    max-width:83% !important;
+    min-width:0 !important;
+    height:330px !important;
+    left:auto !important;right:auto !important;top:auto !important;bottom:auto !important;
+    transform:none !important;
+    margin:0 !important;
+    padding:10px 10px 43px !important;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+    box-shadow:7px 8px 0 rgba(0,0,0,.16) !important;
+  }
+  #origen .memory-collage .memory-photo img{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    flex:1 1 auto !important;
+    object-fit:cover !important;
+    object-position:center !important;
+  }
+  #origen .memory-collage .memory-photo figcaption{
+    font-size:12px;
+    line-height:1.2;
+    bottom:12px;
+  }
+  #origen .memory-swipe-hint{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin:10px 0 0;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-align:center;
+    color:#b98e35;
+  }
+  #origen .memory-swipe-hint span{font-size:23px;line-height:1}
+}
