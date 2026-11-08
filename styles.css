@@ -645,3 +645,13 @@ label[for="telefono"]{
 /* Galería: separar las líneas de «La historia que nunca pensé contar» */
 .gallery .wrap > h2 { line-height:1.12; text-wrap:balance; }
 @media (max-width:760px) { .gallery .wrap > h2 { line-height:1.17; } }
+
+
+/* Sección del libro: separación legible del título en varias líneas */
+#libro .wrap > div > h2 {
+  line-height: 1.14;
+  text-wrap: balance;
+}
+@media (max-width: 760px) {
+  #libro .wrap > div > h2 { line-height: 1.19; }
+}
