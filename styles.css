@@ -696,3 +696,117 @@ label[for="telefono"]{
   #musica > .wrap.center > h2.big { font-size: clamp(40px, 10.8vw, 46px); }
   #musica > .wrap.center > p.copy { font-size: 15px; }
 }
+
+
+/* MÓVIL · Discografía premium: cuadrícula 2 × 2 y reproducción compacta */
+@media (max-width: 760px) {
+  #musica > .wrap.center > h2.big {
+    width:100% !important;
+    max-width:100% !important;
+    font-size:clamp(39px, 10.5vw, 64px) !important;
+    line-height:1.13 !important;
+    letter-spacing:.005em !important;
+    overflow-wrap:normal;
+    text-wrap:balance;
+    margin:0 auto !important;
+  }
+  #musica > .wrap.center > p.copy {
+    max-width:34ch !important;
+    font-size:clamp(14px, 3.8vw, 16px) !important;
+    line-height:1.65 !important;
+    margin:22px auto 34px !important;
+  }
+  #musica .playlist-four {
+    width:calc(100% - 28px) !important;
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
+    align-items:stretch !important;
+    gap:13px !important;
+  }
+  #musica .playlist-four .track,
+  #musica .playlist-four .track.featured,
+  #musica .playlist-four .frecuencia-card {
+    grid-column:auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:12px !important;
+    min-width:0 !important;
+    min-height:0 !important;
+    padding:22px 11px 16px !important;
+    border-radius:19px !important;
+    text-align:center !important;
+    box-shadow:0 6px 0 rgba(0,0,0,.18), inset 0 0 0 1px rgba(201,151,47,.18) !important;
+  }
+  #musica .playlist-four .track-art {
+    width:68px !important;
+    height:68px !important;
+    flex:0 0 68px !important;
+    margin:0 auto !important;
+    font-size:29px !important;
+    border-color:#c9972f;
+  }
+  #musica .playlist-four .track > div:last-child {
+    width:100% !important;
+    flex:1 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+    min-width:0 !important;
+  }
+  #musica .playlist-four .track span:not(.mobile-play-icon):not(.mobile-play-label) {
+    font-size:10px !important;
+    letter-spacing:.19em !important;
+  }
+  #musica .playlist-four .track h3 {
+    font-size:clamp(19px, 5.4vw, 25px) !important;
+    line-height:1.18 !important;
+    margin:8px 0 9px !important;
+    overflow-wrap:break-word;
+  }
+  #musica .playlist-four .track-desc {
+    display:-webkit-box !important;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+    min-height:0 !important;
+    max-width:100%;
+    margin:0 0 15px !important;
+    font-size:11px !important;
+    line-height:1.5 !important;
+    color:#cfc9c2;
+  }
+  #musica .playlist-four .track audio {
+    width:100% !important;
+    margin-top:auto !important;
+  }
+  #musica.mobile-discography-ready .playlist-four .track audio { display:none !important; }
+  #musica .playlist-four .mobile-track-play { display:none; }
+  #musica.mobile-discography-ready .playlist-four .mobile-track-play {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    width:100%;
+    min-height:39px;
+    padding:8px 6px;
+    margin-top:auto;
+    border:1px solid rgba(201,151,47,.75);
+    border-radius:999px;
+    background:#c9972f;
+    color:#111;
+    font:800 11px Inter,system-ui,sans-serif;
+    letter-spacing:.035em;
+    cursor:pointer;
+  }
+  #musica .mobile-track-play[aria-pressed="true"] { background:#fff0c3 !important; }
+  #musica .mobile-track-play:focus-visible { outline:3px solid #fff1ce; outline-offset:3px; }
+  #musica .mobile-play-icon { font-size:13px; line-height:1; }
+}
+@media (max-width: 360px) {
+  #musica .playlist-four { width:calc(100% - 22px) !important; gap:10px !important; }
+  #musica .playlist-four .track { padding:18px 8px 14px !important; }
+  #musica .playlist-four .track h3 { font-size:19px !important; }
+}
