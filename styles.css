@@ -985,3 +985,108 @@ label[for="telefono"]{
     min-height:40px !important;
   }
 }
+
+
+/* Discografía ampliada: solo dispositivos móviles. */
+.mobile-discography-more { display:none; }
+@media (max-width:760px) {
+  #musica .mobile-discography-more {
+    display:block;
+    width:calc(100% - 40px);
+    max-width:560px;
+    margin:34px auto 8px;
+    color:#191919;
+  }
+  #musica .mobile-discography-expand {
+    border:0;
+    margin:0;
+  }
+  #musica .mobile-discography-expand > summary {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    list-style:none;
+    min-height:67px;
+    padding:18px 20px;
+    background:#202124;
+    color:#e1b257;
+    font:800 clamp(12px,3.35vw,15px)/1.35 Inter,system-ui,sans-serif;
+    letter-spacing:.16em;
+    cursor:pointer;
+  }
+  #musica .mobile-discography-expand > summary::-webkit-details-marker {display:none;}
+  #musica .mobile-discography-expand > summary span {font-size:26px;line-height:1;transition:transform .2s;}
+  #musica .mobile-discography-expand[open] > summary span {transform:rotate(90deg);}
+  #musica .mobile-discography-expand > summary:focus-visible,
+  #musica .mobile-discography-platforms a:focus-visible,
+  #musica .mobile-discography-full:focus-visible {
+    outline:3px solid #181818;
+    outline-offset:3px;
+  }
+  #musica .mobile-discography-extra {
+    padding:20px 6px 10px;
+  }
+  #musica .mobile-discography-extra > p {
+    margin:0 0 12px;
+    font:800 11px/1.5 Inter,system-ui,sans-serif;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+  }
+  #musica .mobile-discography-extra ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+    border-top:2px solid rgba(20,20,20,.75);
+  }
+  #musica .mobile-discography-extra li {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:5px 10px;
+    padding:13px 2px;
+    border-bottom:1px solid rgba(20,20,20,.28);
+    font:700 14px/1.35 Inter,system-ui,sans-serif;
+  }
+  #musica .mobile-discography-extra li small {
+    font:500 12px/1.4 Inter,system-ui,sans-serif;
+    color:#614d28;
+  }
+  #musica .mobile-discography-full {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:18px;
+    padding:15px 3px;
+    border-bottom:2px solid #171717;
+    font:800 12px/1.5 Inter,system-ui,sans-serif;
+    letter-spacing:.07em;
+  }
+  #musica .mobile-discography-full span {font-size:20px;}
+  #musica .mobile-discography-platform-label {
+    margin:28px 0 13px;
+    color:#3d321e;
+    font:600 12px/1.5 Inter,system-ui,sans-serif;
+    letter-spacing:.27em;
+  }
+  #musica .mobile-discography-platforms {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  #musica .mobile-discography-platforms a {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:5px;
+    min-height:60px;
+    padding:10px 7px;
+    border:2px solid #1b1b1b;
+    font:800 clamp(10px,2.75vw,13px)/1.3 Inter,system-ui,sans-serif;
+    letter-spacing:.11em;
+    white-space:nowrap;
+  }
+  #musica .mobile-discography-platforms a span {font-size:15px;}
+}
