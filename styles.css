@@ -626,7 +626,7 @@ label[for="telefono"]{
 .contact-form .contact-send { margin-top:13px; width:100%; cursor:pointer; border-radius:999px; font:800 13px Inter,sans-serif; text-transform:uppercase; letter-spacing:.04em; padding:17px 12px; }
 .contact-form small { color:#c7beb6; font-size:11px; line-height:1.55; }
 .contact-email-fallback { color:#e7bd69; font-size:12px; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
-@media (max-width:700px) { .contact-dialog { width:calc(100% - 20px); max-height:94dvh; } .contact-dialog-grid { grid-template-columns:1fr; } .contact-dialog-photo { min-height:0; height:220px; } .contact-dialog-photo img { min-height:0; height:100%; object-position:center 30%; } .contact-dialog-photo span { padding:32px 18px 13px; } .contact-dialog-content { padding:28px 22px 32px; } .contact-dialog-content h2 { font-size:37px; } }
+@media (max-width:700px) { .contact-dialog { width:calc(100% - 20px); max-height:94dvh; } .contact-dialog-grid { grid-template-columns:1fr; } .contact-dialog-photo { min-height:0; height:280px; } .contact-dialog-photo img { min-height:0; height:100%; object-position:center 5%; } .contact-dialog-photo span { padding:32px 18px 13px; } .contact-dialog-content { padding:28px 22px 32px; } .contact-dialog-content h2 { font-size:37px; } }
 @media (prefers-reduced-motion:reduce) { .contact-dialog::backdrop { backdrop-filter:none; } }
 
 /* Prensa: interlineado del titular principal para evitar solapamientos */
