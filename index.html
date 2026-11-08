@@ -365,8 +365,48 @@
           <div class="polaroid p4"><div><img src="assets/images 3/mk-aris-faro-recorte.jpg" alt="MK MAIK y Aris Gómez Olalla con efecto periódico"></div><span>Mi frecuencia · Aris Gómez Olalla</span></div>
         </div>
         <p class="gallery-swipe-hint" aria-hidden="true">DESLIZA PARA VER LAS 4 FOTOS <span>→</span></p>
+        <div class="website-visits" aria-label="Contador de visitas a la web">
+          <span class="website-visits-kicker">LA FRECUENCIA SIGUE CRECIENDO</span>
+          <p class="website-visits-label">HAN VISITADO ESTA WEB</p>
+          <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">—</p>
+          <p class="website-visits-note">Contador iniciado en 300.000; se añaden las nuevas visitas registradas desde su activación.</p>
+        </div>
       </div>
     </section>
+
+    <script>
+    (() => {
+      const el = document.getElementById('websiteVisitsNumber');
+      if (!el) return;
+      const root = 'https://countapi.mileshilliard.com/api/v1/';
+      const key = 'mkmaik-com-visits-since-20261108-c9e2f77d';
+      const sessionKey = 'mkmaik-site-visit-recorded-v1';
+      const format = count => new Intl.NumberFormat('es-ES').format(300000 + count);
+      let recorded = false;
+      try { recorded = sessionStorage.getItem(sessionKey) === 'yes'; } catch (_) {}
+      const endpoint = recorded ? 'get' : 'hit';
+      fetch(root + endpoint + '/' + key, { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) {
+            if (recorded && response.status === 404) return { value: 0 };
+            throw new Error('Counter unavailable');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const value = Number(data.value);
+          if (!Number.isSafeInteger(value) || value < 0) throw new Error('Invalid counter');
+          el.textContent = format(value);
+          if (!recorded) {
+            try { sessionStorage.setItem(sessionKey, 'yes'); } catch (_) {}
+          }
+        })
+        .catch(() => {
+          el.textContent = '—';
+          el.setAttribute('aria-label', 'No se pudo consultar el contador de visitas');
+        });
+    })();
+    </script>
 
     <section id="contacto" class="contact">
       <div class="wrap center">
