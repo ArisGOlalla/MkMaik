@@ -436,3 +436,39 @@ label[for="telefono"]{
   text-transform: none;
   letter-spacing: 0;
 }
+
+
+/* CHAMELO · fotografía editorial en su tarjeta, sin alterar otras marcas */
+.brand-grid article.chamelo-feature {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-color: rgba(201,151,47,.55);
+}
+.chamelo-feature-image {
+  width: 100%;
+  aspect-ratio: 1122 / 1402;
+  background: #100e0d;
+  overflow: hidden;
+}
+.chamelo-feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.chamelo-feature-content {
+  padding: clamp(24px,3vw,34px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.chamelo-feature-content h3 { margin: 0; }
+.chamelo-feature-content p { margin: 0; line-height: 1.7; }
+.chamelo-feature-content .brand-link { margin-top: 4px; }
+@media (max-width: 760px) {
+  .chamelo-feature-content { padding: 24px; }
+}
