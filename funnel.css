@@ -43,3 +43,18 @@
     line-height: 1.2;
   }
 }
+
+/* Título «La historia ya está disponible para leer»: más espacio y legibilidad. */
+#comprar h2 {
+  letter-spacing: .055em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+@media (max-width: 760px) {
+  #comprar h2 {
+    font-size: clamp(36px, 8vw, 60px);
+    letter-spacing: .04em;
+    line-height: 1.2;
+  }
+}
