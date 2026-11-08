@@ -36,3 +36,34 @@ allAudios.forEach(a=>a.addEventListener('play',()=>{ allAudios.forEach(b=>{if(b!
     window.location.href = 'mailto:info.artista@mkmaik.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 })();
+
+
+/* Móvil: botones compactos accesibles para reproducir las cuatro canciones. */
+(() => {
+  const section = document.getElementById('musica');
+  if (!section) return;
+  const cards = [...section.querySelectorAll('.playlist-four .track')];
+  if (!cards.length || cards.some(card => !card.querySelector('audio') || !card.querySelector('.mobile-track-play'))) return;
+  function sync() {
+    cards.forEach(card => {
+      const audio = card.querySelector('audio');
+      const button = card.querySelector('.mobile-track-play');
+      const playing = !audio.paused && !audio.ended;
+      button.setAttribute('aria-pressed', String(playing));
+      button.setAttribute('aria-label', (playing ? 'Pausar ' : 'Reproducir ') + (card.querySelector('h3')?.textContent?.trim() || 'canción'));
+      button.querySelector('.mobile-play-icon').textContent = playing ? 'Ⅱ' : '▶';
+      button.querySelector('.mobile-play-label').textContent = playing ? 'Pausar' : 'Escuchar';
+    });
+  }
+  cards.forEach(card => {
+    const audio = card.querySelector('audio');
+    const button = card.querySelector('.mobile-track-play');
+    button.addEventListener('click', () => {
+      if (audio.paused) audio.play().catch(() => { sync(); });
+      else audio.pause();
+    });
+    ['play', 'pause', 'ended'].forEach(name => audio.addEventListener(name, sync));
+  });
+  section.classList.add('mobile-discography-ready');
+  sync();
+})();
