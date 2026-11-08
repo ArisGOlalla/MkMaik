@@ -1090,3 +1090,23 @@ label[for="telefono"]{
   }
   #musica .mobile-discography-platforms a span {font-size:15px;}
 }
+
+
+/* Enlace a la subpágina editorial, exclusivamente móvil */
+@media(max-width:760px){
+  #musica .mobile-discography-page-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    min-height:68px;
+    padding:18px 20px;
+    background:#202124;
+    color:#e1b257;
+    font:800 clamp(12px,3.4vw,15px)/1.35 Inter,system-ui,sans-serif;
+    letter-spacing:.15em;
+    text-decoration:none;
+  }
+  #musica .mobile-discography-page-link span{font-size:25px;line-height:1}
+  #musica .mobile-discography-page-link:focus-visible{outline:3px solid #181818;outline-offset:3px}
+}
