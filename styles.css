@@ -1177,3 +1177,22 @@ label[for="telefono"]{
   }
   #origen .memory-swipe-hint span{font-size:23px;line-height:1}
 }
+
+
+/* Capítulo 0 · El origen: botón legible sobre fondo crema */
+#origen a.btn.outline{
+  background:#24201a;
+  border:2px solid #b88b30;
+  color:#f7e2ad;
+  box-shadow:0 5px 0 rgba(84,61,23,.20);
+  transition:background .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+#origen a.btn.outline:hover,
+#origen a.btn.outline:focus-visible{
+  background:#c99b36;
+  border-color:#24201a;
+  color:#15120d;
+  transform:translateY(-2px);
+  box-shadow:0 7px 0 rgba(84,61,23,.17);
+}
+#origen a.btn.outline:focus-visible{outline:3px solid #17130b;outline-offset:3px}
