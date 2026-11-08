@@ -810,3 +810,178 @@ label[for="telefono"]{
   #musica .playlist-four .track { padding:18px 8px 14px !important; }
   #musica .playlist-four .track h3 { font-size:19px !important; }
 }
+
+
+/* MÓVIL · Discografía editorial inspirada en el ejemplo facilitado.
+   Filas horizontales, separadores finos y reproducción directa;
+   exclusivamente hasta 760px, sin cambiar la versión escritorio. */
+@media (max-width:760px) {
+  #musica {
+    padding-top:75px !important;
+    padding-bottom:95px !important;
+  }
+  #musica > .wrap.center {
+    width:calc(100% - 40px) !important;
+    max-width:560px !important;
+    text-align:left !important;
+    padding:0 !important;
+    margin-bottom:30px !important;
+  }
+  #musica > .wrap.center > .eyebrow {
+    margin:0 0 24px !important;
+    text-align:left !important;
+    font-size:12px !important;
+    font-weight:800 !important;
+    letter-spacing:.27em !important;
+    line-height:1.4 !important;
+  }
+  #musica > .wrap.center > h2.big {
+    max-width:11ch !important;
+    width:100% !important;
+    margin:0 !important;
+    font-size:clamp(43px,11.4vw,74px) !important;
+    line-height:1.05 !important;
+    letter-spacing:.002em !important;
+    text-align:left !important;
+    text-wrap:balance;
+  }
+  #musica > .wrap.center > p.copy {
+    margin:30px 0 0 !important;
+    max-width:34ch !important;
+    font-size:clamp(15px,4.2vw,19px) !important;
+    line-height:1.6 !important;
+    text-align:left !important;
+    font-weight:400 !important;
+  }
+  #musica .playlist-four {
+    display:block !important;
+    width:calc(100% - 40px) !important;
+    max-width:560px !important;
+    margin:0 auto !important;
+    border-top:2px solid rgba(20,20,20,.8);
+  }
+  #musica .playlist-four .track,
+  #musica .playlist-four .track.featured,
+  #musica .playlist-four .frecuencia-card {
+    display:block !important;
+    min-height:0 !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:18px 0 !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(20,20,20,.29) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    text-align:left !important;
+    transform:none !important;
+  }
+  #musica .playlist-four .track:hover {
+    background:transparent !important;
+    border-color:rgba(20,20,20,.29) !important;
+    box-shadow:none !important;
+    transform:none !important;
+  }
+  #musica .playlist-four .track-art { display:none !important; }
+  #musica .playlist-four .track > div:last-child {
+    display:grid !important;
+    grid-template-columns:45px minmax(0,1fr) auto !important;
+    grid-template-rows:auto auto !important;
+    column-gap:14px !important;
+    row-gap:5px !important;
+    width:100% !important;
+    min-width:0 !important;
+    align-items:center !important;
+    justify-items:stretch !important;
+    text-align:left !important;
+  }
+  #musica .playlist-four .track > div:last-child > span:not(.mobile-track-duration) {
+    display:none !important;
+  }
+  #musica .playlist-four .track h3 {
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:end !important;
+    margin:0 !important;
+    font-family:Inter,system-ui,sans-serif !important;
+    font-size:clamp(16px,4.6vw,21px) !important;
+    font-weight:800 !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+    color:#191919 !important;
+    text-transform:none !important;
+  }
+  #musica .playlist-four .track-desc {
+    grid-column:2 !important;
+    grid-row:2 !important;
+    display:block !important;
+    margin:0 !important;
+    padding:0 !important;
+    min-height:0 !important;
+    font-size:0 !important;
+    line-height:1.25 !important;
+    color:#514327 !important;
+    overflow:hidden !important;
+    -webkit-line-clamp:unset !important;
+  }
+  #musica .playlist-four .track-desc::before {
+    content:"MK MAIK";
+    font:500 13px/1.4 Inter,system-ui,sans-serif;
+    color:#584a2a;
+  }
+  #musica .playlist-four .track audio { display:none !important; }
+  #musica .playlist-four .mobile-track-play,
+  #musica.mobile-discography-ready .playlist-four .mobile-track-play {
+    grid-column:1 !important;
+    grid-row:1 / 3 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:44px !important;
+    height:44px !important;
+    min-height:44px !important;
+    margin:0 !important;
+    padding:0 !important;
+    border:2px solid #24201a !important;
+    border-radius:50% !important;
+    background:transparent !important;
+    color:#171717 !important;
+    box-shadow:none !important;
+    cursor:pointer;
+  }
+  #musica .playlist-four .mobile-play-icon {
+    font-size:16px !important;
+    line-height:1 !important;
+    color:#171717 !important;
+  }
+  #musica .playlist-four .mobile-play-label { display:none !important; }
+  #musica .playlist-four .mobile-track-play[aria-pressed="true"] {
+    background:rgba(20,20,20,.12) !important;
+  }
+  #musica .playlist-four .mobile-track-duration {
+    grid-column:3 !important;
+    grid-row:1 / 3 !important;
+    align-self:center !important;
+    justify-self:end !important;
+    white-space:nowrap !important;
+    font:700 13px/1.3 Inter,system-ui,sans-serif !important;
+    letter-spacing:0 !important;
+    color:#6c542c !important;
+  }
+  #musica .playlist-four .mobile-track-play:focus-visible {
+    outline:3px solid #171717 !important;
+    outline-offset:3px !important;
+  }
+}
+@media (max-width:360px) {
+  #musica .playlist-four .track > div:last-child {
+    grid-template-columns:40px minmax(0,1fr) auto !important;
+    column-gap:9px !important;
+  }
+  #musica .playlist-four .mobile-track-play,
+  #musica.mobile-discography-ready .playlist-four .mobile-track-play {
+    width:40px !important;
+    height:40px !important;
+    min-height:40px !important;
+  }
+}
