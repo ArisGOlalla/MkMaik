@@ -26,7 +26,7 @@
   font-family:Anton, Bebas Neue, sans-serif;
   text-transform:uppercase;
   font-size:clamp(42px,6vw,88px);
-  line-height:.9;
+  line-height:1.13;
   margin:8px 0 24px;
   color:#f4efe6;
 }
