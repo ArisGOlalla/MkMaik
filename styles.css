@@ -1267,15 +1267,15 @@ label[for="telefono"]{
 .gallery .website-visits{
   margin:48px auto 10px;
   max-width:680px;
-  padding:35px 22px 32px;
+  padding:18px 0 12px;
   text-align:center;
-  background:linear-gradient(140deg,#18191b,#27211b);
-  border:1px solid rgba(201,151,47,.65);
-  border-radius:18px;
-  box-shadow:0 16px 38px rgba(0,0,0,.22);
+  background:transparent;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
 }
 .gallery .website-visits-kicker{display:block;font-size:11px;font-weight:800;letter-spacing:.2em;color:#c9972f}
 .gallery .website-visits-label{margin:14px 0 8px;font-size:clamp(14px,2vw,18px);font-weight:900;letter-spacing:.08em;color:#fff8d7}
 .gallery .website-visits-number{margin:0;font:900 clamp(46px,8vw,78px)/1.15 Anton,Impact,sans-serif;letter-spacing:.07em;color:#e7b548;font-variant-numeric:tabular-nums}
 .gallery .website-visits-note{max-width:480px;margin:13px auto 0;color:#d3c9b5;font-size:12px;line-height:1.6}
-@media(max-width:760px){.gallery .website-visits{margin:28px auto 5px;padding:25px 15px}.gallery .website-visits-number{font-size:clamp(43px,12vw,70px)}}
+@media(max-width:760px){.gallery .website-visits{margin:28px auto 5px;padding:16px 0}.gallery .website-visits-number{font-size:clamp(43px,12vw,70px)}}
