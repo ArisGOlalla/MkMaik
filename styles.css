@@ -655,3 +655,44 @@ label[for="telefono"]{
 @media (max-width: 760px) {
   #libro .wrap > div > h2 { line-height: 1.19; }
 }
+
+
+/* MÓVIL · Cabecera de discografía: lectura editorial, sin efecto listado */
+@media (max-width: 760px) {
+  #musica > .wrap.center {
+    width: min(100% - 40px, 470px);
+    margin-inline: auto;
+    padding: 0 4px;
+    text-align: center;
+  }
+  #musica > .wrap.center > .eyebrow {
+    display: block;
+    margin: 0 auto 22px;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: .27em;
+    font-weight: 600;
+  }
+  #musica > .wrap.center > h2.big {
+    max-width: 11ch;
+    margin: 0 auto;
+    font-size: clamp(43px, 11vw, 66px);
+    line-height: 1.12;
+    letter-spacing: .012em;
+    text-wrap: balance;
+    overflow-wrap: normal;
+  }
+  #musica > .wrap.center > p.copy {
+    max-width: 32ch;
+    margin: 25px auto 42px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: .005em;
+    text-wrap: pretty;
+  }
+}
+@media (max-width: 380px) {
+  #musica > .wrap.center > h2.big { font-size: clamp(40px, 10.8vw, 46px); }
+  #musica > .wrap.center > p.copy { font-size: 15px; }
+}
