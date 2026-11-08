@@ -1196,3 +1196,68 @@ label[for="telefono"]{
   box-shadow:0 7px 0 rgba(84,61,23,.17);
 }
 #origen a.btn.outline:focus-visible{outline:3px solid #17130b;outline-offset:3px}
+
+
+/* Detrás de la frecuencia: carrusel de polaroids táctil, exclusivamente móvil */
+.gallery-swipe-hint{display:none}
+@media (max-width:760px){
+  .gallery .polaroids{
+    display:flex !important;
+    position:relative !important;
+    align-items:stretch !important;
+    gap:16px !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    margin-top:20px !important;
+    padding:16px 8px 22px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:8px;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    scrollbar-color:#c9972f transparent;
+  }
+  .gallery .polaroids > .polaroid{
+    display:block !important;
+    position:relative !important;
+    flex:0 0 82% !important;
+    width:82% !important;
+    max-width:82% !important;
+    min-width:0 !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    transform:none !important;
+    margin:0 !important;
+    box-shadow:0 12px 20px rgba(0,0,0,.25) !important;
+    scroll-snap-align:center;
+    scroll-snap-stop:always;
+  }
+  .gallery .polaroids > .polaroid div{
+    height:250px !important;
+  }
+  .gallery .polaroids > .polaroid div img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+  .gallery .gallery-swipe-hint{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin:12px 0 0;
+    color:#c9972f;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.11em;
+    text-align:center;
+  }
+  .gallery .gallery-swipe-hint span{font-size:23px;line-height:1}
+}
