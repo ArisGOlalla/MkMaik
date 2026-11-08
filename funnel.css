@@ -13,3 +13,18 @@
     line-height: 1.08 !important;
   }
 }
+
+/* Título «La frecuencia que sostiene esta historia»: mayor legibilidad. */
+.values-section h2 {
+  letter-spacing: .055em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+@media (max-width: 760px) {
+  .values-section h2 {
+    font-size: clamp(36px, 8vw, 60px);
+    letter-spacing: .04em;
+    line-height: 1.2;
+  }
+}
