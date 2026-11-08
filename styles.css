@@ -628,3 +628,12 @@ label[for="telefono"]{
 .contact-email-fallback { color:#e7bd69; font-size:12px; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
 @media (max-width:700px) { .contact-dialog { width:calc(100% - 20px); max-height:94dvh; } .contact-dialog-grid { grid-template-columns:1fr; } .contact-dialog-photo { min-height:0; height:220px; } .contact-dialog-photo img { min-height:0; height:100%; object-position:center 30%; } .contact-dialog-photo span { padding:32px 18px 13px; } .contact-dialog-content { padding:28px 22px 32px; } .contact-dialog-content h2 { font-size:37px; } }
 @media (prefers-reduced-motion:reduce) { .contact-dialog::backdrop { backdrop-filter:none; } }
+
+/* Prensa: interlineado del titular principal para evitar solapamientos */
+#prensa > .wrap > h2 {
+  line-height: 1.12;
+  text-wrap: balance;
+}
+@media (max-width: 760px) {
+  #prensa > .wrap > h2 { line-height: 1.16; }
+}
