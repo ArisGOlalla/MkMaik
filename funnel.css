@@ -44,17 +44,111 @@
   }
 }
 
-/* Título «La historia ya está disponible para leer»: más espacio y legibilidad. */
-#comprar h2 {
-  letter-spacing: .055em;
-  line-height: 1.16;
-  text-wrap: balance;
+/* Área de compra: composición equilibrada, jerarquía legible y responsive. */
+#comprar {
+  padding: clamp(65px, 7vw, 105px) 0;
 }
 
-@media (max-width: 760px) {
+#comprar .reserve-card {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 52px);
+  padding: clamp(28px, 3.5vw, 48px);
+}
+
+#comprar .reserve-card > div {
+  min-width: 0;
+}
+
+#comprar .eyebrow {
+  margin: 0 0 16px;
+}
+
+#comprar h2 {
+  font-size: clamp(38px, 3.7vw, 56px);
+  letter-spacing: .04em;
+  line-height: 1.13;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  margin: 0 0 20px;
+}
+
+#comprar .reserve-card > div:first-child > p:not(.eyebrow) {
+  max-width: 52ch;
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.65;
+}
+
+#comprar .reserve-bonus {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+#comprar .reserve-bonus span {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+#comprar .reserve-form {
+  gap: 18px;
+  padding: clamp(24px, 2.5vw, 34px);
+}
+
+#comprar .reserve-form h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 27px);
+  line-height: 1.25;
+}
+
+#comprar .reserve-form p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#comprar .reserve-form .btn {
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.35;
+}
+
+#comprar .reserve-form small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+  #comprar .reserve-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
   #comprar h2 {
-    font-size: clamp(36px, 8vw, 60px);
-    letter-spacing: .04em;
-    line-height: 1.2;
+    font-size: clamp(36px, 7.5vw, 52px);
+    letter-spacing: .035em;
+  }
+}
+
+@media (max-width: 480px) {
+  #comprar .reserve-card {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  #comprar h2 {
+    font-size: clamp(33px, 9.2vw, 42px);
+    letter-spacing: .025em;
+    line-height: 1.14;
+  }
+
+  #comprar .reserve-form {
+    padding: 22px 18px;
   }
 }
