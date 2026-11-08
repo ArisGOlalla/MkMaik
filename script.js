@@ -67,3 +67,27 @@ allAudios.forEach(a=>a.addEventListener('play',()=>{ allAudios.forEach(b=>{if(b!
   section.classList.add('mobile-discography-ready');
   sync();
 })();
+
+
+/* Mostrar la duración real de cada audio sin inventar tiempos. */
+(() => {
+  const section = document.getElementById('musica');
+  if (!section) return;
+  const formatDuration = seconds => {
+    const total = Math.floor(seconds);
+    return Math.floor(total / 60) + ':' + String(total % 60).padStart(2, '0');
+  };
+  section.querySelectorAll('.playlist-four .track').forEach(card => {
+    const audio = card.querySelector('audio');
+    const label = card.querySelector('.mobile-track-duration');
+    if (!audio || !label) return;
+    const refresh = () => {
+      if (Number.isFinite(audio.duration) && audio.duration > 0) label.textContent = formatDuration(audio.duration);
+      else label.textContent = '—';
+    };
+    audio.addEventListener('loadedmetadata', refresh);
+    audio.addEventListener('durationchange', refresh);
+    audio.addEventListener('error', refresh);
+    if (audio.readyState >= 1) refresh();
+  });
+})();
