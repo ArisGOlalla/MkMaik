@@ -1281,10 +1281,15 @@ label[for="telefono"]{
 @media(max-width:760px){.gallery .website-visits{margin:28px auto 5px;padding:16px 0}.gallery .website-visits-number{font-size:clamp(43px,12vw,70px)}}
 
 /* Tira continua de logotipos: una sola fila, sin recuadro y fondo negro */
-.gallery .media-logo-marquee{position:relative;width:100%;overflow:hidden;background:#000;margin:26px auto 0;padding:22px 0;isolation:isolate}
-.gallery .media-logo-track{display:flex;width:max-content;animation:mkmaik-media-scroll 56s linear infinite;will-change:transform}
-.gallery .media-logo-group{display:flex;align-items:center;gap:18px;flex:0 0 auto;padding-right:18px}
-.gallery .media-logo-slice{display:block;height:104px;flex:none;background-image:url("https://d2ol7oe51mr4n9.cloudfront.net/user_3HpgCbp8PHQ2zTf1E8xLh22Xn4l/1191994d-7428-4558-bbc8-e9040c5ec9bc.png");background-repeat:no-repeat;background-size:1664px 936px;background-position:var(--logo-x) var(--logo-y);mix-blend-mode:screen}
+.media-logo-band .media-logo-marquee{position:relative;width:100%;overflow:hidden;background:#000;margin:26px auto 0;padding:22px 0;isolation:isolate}
+.media-logo-band .media-logo-track{display:flex;width:max-content;animation:mkmaik-media-scroll 56s linear infinite;will-change:transform}
+.media-logo-band .media-logo-group{display:flex;align-items:center;gap:18px;flex:0 0 auto;padding-right:18px}
+.media-logo-band .media-logo-slice{display:block;height:104px;flex:none;background-image:url("https://d2ol7oe51mr4n9.cloudfront.net/user_3HpgCbp8PHQ2zTf1E8xLh22Xn4l/1191994d-7428-4558-bbc8-e9040c5ec9bc.png");background-repeat:no-repeat;background-size:1664px 936px;background-position:var(--logo-x) var(--logo-y);mix-blend-mode:screen}
 @keyframes mkmaik-media-scroll{to{transform:translateX(-50%)}}
-@media(max-width:760px){.gallery .media-logo-marquee{margin-top:20px;padding:9px 0}.gallery .media-logo-track{animation-duration:45s}.gallery .media-logo-group{gap:12px;padding-right:12px}}
-@media(prefers-reduced-motion:reduce){.gallery .media-logo-track{animation:none}.gallery .media-logo-marquee{overflow-x:auto}}
+@media(max-width:760px){.media-logo-band .media-logo-marquee{margin-top:20px;padding:9px 0}.media-logo-band .media-logo-track{animation-duration:45s}.media-logo-band .media-logo-group{gap:12px;padding-right:12px}}
+@media(prefers-reduced-motion:reduce){.media-logo-band .media-logo-track{animation:none}.media-logo-band .media-logo-marquee{overflow-x:auto}}
+
+/* Franja independiente justo encima de Contacto */
+.media-logo-band{width:100%;background:#000;overflow:hidden;padding:0;margin:0}
+.media-logo-band .media-logo-marquee{margin:0;padding:18px 0;border:0;box-shadow:none;border-radius:0}
+@media(max-width:760px){.media-logo-band .media-logo-marquee{margin:0;padding:10px 0}}
