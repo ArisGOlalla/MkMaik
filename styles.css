@@ -637,3 +637,7 @@ label[for="telefono"]{
 @media (max-width: 760px) {
   #prensa > .wrap > h2 { line-height: 1.16; }
 }
+
+/* Titular Frecuencia del Superviviente: más espacio entre líneas */
+#superviviente .wrap > h2 { line-height:1.12; text-wrap:balance; }
+@media (max-width:760px) { #superviviente .wrap > h2 { line-height:1.17; } }
