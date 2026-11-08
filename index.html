@@ -368,7 +368,7 @@
         <div class="website-visits" aria-label="Contador de visitas a la web">
           <span class="website-visits-kicker">LA FRECUENCIA SIGUE CRECIENDO</span>
           <p class="website-visits-label">HAN VISITADO ESTA WEB</p>
-          <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">—</p>
+          <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">300.000</p>
           <p class="website-visits-note">Contador iniciado en 300.000; se añaden las nuevas visitas registradas desde su activación.</p>
         </div>
       </div>
@@ -402,8 +402,10 @@
           }
         })
         .catch(() => {
-          el.textContent = '—';
-          el.setAttribute('aria-label', 'No se pudo consultar el contador de visitas');
+          el.textContent = '300.000';
+          el.setAttribute('aria-label', 'Cifra base de 300.000; actualización temporalmente no disponible');
+          const note = el.closest('.website-visits')?.querySelector('.website-visits-note');
+          if (note) note.textContent = 'Cifra inicial: 300.000. No se ha podido actualizar el recuento en este momento.';
         });
     })();
     </script>
