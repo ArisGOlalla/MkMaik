@@ -371,7 +371,48 @@
           <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">300.000</p>
           <p class="website-visits-note">Contador iniciado en 300.000; se añaden las nuevas visitas registradas desde su activación.</p>
         </div>
-<div class="media-logo-marquee" role="region" aria-label="Cadenas, medios y marcas relacionados con MK MAIK"><div class="media-logo-track"><div class="media-logo-group">
+
+      </div>
+    </section>
+
+    <script>
+    (() => {
+      const el = document.getElementById('websiteVisitsNumber');
+      if (!el) return;
+      const root = 'https://countapi.mileshilliard.com/api/v1/';
+      const key = 'mkmaik-com-visits-since-20261108-c9e2f77d';
+      const sessionKey = 'mkmaik-site-visit-recorded-v1';
+      const format = count => new Intl.NumberFormat('es-ES').format(300000 + count);
+      let recorded = false;
+      try { recorded = sessionStorage.getItem(sessionKey) === 'yes'; } catch (_) {}
+      const endpoint = recorded ? 'get' : 'hit';
+      fetch(root + endpoint + '/' + key, { cache: 'no-store' })
+        .then(response => {
+          if (!response.ok) {
+            if (recorded && response.status === 404) return { value: 0 };
+            throw new Error('Counter unavailable');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const value = Number(data.value);
+          if (!Number.isSafeInteger(value) || value < 0) throw new Error('Invalid counter');
+          el.textContent = format(value);
+          if (!recorded) {
+            try { sessionStorage.setItem(sessionKey, 'yes'); } catch (_) {}
+          }
+        })
+        .catch(() => {
+          el.textContent = '300.000';
+          el.setAttribute('aria-label', 'Cifra base de 300.000; actualización temporalmente no disponible');
+          const note = el.closest('.website-visits')?.querySelector('.website-visits-note');
+          if (note) note.textContent = 'Cifra inicial: 300.000. No se ha podido actualizar el recuento en este momento.';
+        });
+    })();
+    </script>
+
+    <section class="media-logo-band" aria-label="Medios y colaboraciones de MK MAIK">
+      <div class="media-logo-marquee" role="region" aria-label="Cadenas, medios y marcas relacionados con MK MAIK"><div class="media-logo-track"><div class="media-logo-group">
 <span class="media-logo-slice" style="--logo-x:-38px;--logo-y:-360px;width:112px" role="img" aria-label="Antena 3"></span>
 <span class="media-logo-slice" style="--logo-x:-160px;--logo-y:-360px;width:155px" role="img" aria-label="Cadena SER"></span>
 <span class="media-logo-slice" style="--logo-x:-343px;--logo-y:-360px;width:129px" role="img" aria-label="Gran Vía Radio"></span>
@@ -414,44 +455,7 @@
 <span class="media-logo-slice" style="--logo-x:-1357px;--logo-y:-485px;width:120px" ></span>
 <span class="media-logo-slice" style="--logo-x:-1480px;--logo-y:-485px;width:82px" ></span>
 </div></div></div>
-      </div>
     </section>
-
-    <script>
-    (() => {
-      const el = document.getElementById('websiteVisitsNumber');
-      if (!el) return;
-      const root = 'https://countapi.mileshilliard.com/api/v1/';
-      const key = 'mkmaik-com-visits-since-20261108-c9e2f77d';
-      const sessionKey = 'mkmaik-site-visit-recorded-v1';
-      const format = count => new Intl.NumberFormat('es-ES').format(300000 + count);
-      let recorded = false;
-      try { recorded = sessionStorage.getItem(sessionKey) === 'yes'; } catch (_) {}
-      const endpoint = recorded ? 'get' : 'hit';
-      fetch(root + endpoint + '/' + key, { cache: 'no-store' })
-        .then(response => {
-          if (!response.ok) {
-            if (recorded && response.status === 404) return { value: 0 };
-            throw new Error('Counter unavailable');
-          }
-          return response.json();
-        })
-        .then(data => {
-          const value = Number(data.value);
-          if (!Number.isSafeInteger(value) || value < 0) throw new Error('Invalid counter');
-          el.textContent = format(value);
-          if (!recorded) {
-            try { sessionStorage.setItem(sessionKey, 'yes'); } catch (_) {}
-          }
-        })
-        .catch(() => {
-          el.textContent = '300.000';
-          el.setAttribute('aria-label', 'Cifra base de 300.000; actualización temporalmente no disponible');
-          const note = el.closest('.website-visits')?.querySelector('.website-visits-note');
-          if (note) note.textContent = 'Cifra inicial: 300.000. No se ha podido actualizar el recuento en este momento.';
-        });
-    })();
-    </script>
 
     <section id="contacto" class="contact">
       <div class="wrap center">
