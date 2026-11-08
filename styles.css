@@ -641,3 +641,7 @@ label[for="telefono"]{
 /* Titular Frecuencia del Superviviente: más espacio entre líneas */
 #superviviente .wrap > h2 { line-height:1.12; text-wrap:balance; }
 @media (max-width:760px) { #superviviente .wrap > h2 { line-height:1.17; } }
+
+/* Galería: separar las líneas de «La historia que nunca pensé contar» */
+.gallery .wrap > h2 { line-height:1.12; text-wrap:balance; }
+@media (max-width:760px) { .gallery .wrap > h2 { line-height:1.17; } }
