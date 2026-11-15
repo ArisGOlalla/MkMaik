@@ -119,7 +119,7 @@ body.mk-subpage footer{
 body.mk-subpage footer a:hover{
   color:#f1ca70;
 }
-@media(min-width:1051px){
+@media(min-width:1361px){
   body.mk-subpage > header .menu-toggle,
   body.mk-subpage > header .nav-mobile,
   body.mk-subpage > header .mobile-nav-toggle{display:none!important}
@@ -128,7 +128,7 @@ body.mk-subpage footer a:hover{
   body.mk-subpage > header .mobile-menu,
   body.mk-subpage > header .menu-panel[hidden]{display:none!important}
 }
-@media(max-width:1050px){
+@media(max-width:1360px){
   body.mk-subpage > header .desktop-nav{display:none!important}
   body.mk-subpage > header .menu-toggle,
   body.mk-subpage > header .nav-mobile,
@@ -159,4 +159,17 @@ body.mk-subpage footer a:hover{
   body.mk-subpage > header .nav{padding-inline:16px}
   body.mk-subpage > header .brand,
   body.mk-subpage > header .logo{font-size:24px}
+}
+
+/* Keep menus within the usable width at intermediate desktop breakpoints. */
+@media(min-width:1361px){
+  body.mk-subpage > header .desktop-nav{gap:clamp(8px,.95vw,16px)}
+  body.mk-subpage > header .desktop-nav a{font-size:clamp(9px,.65vw,11px);letter-spacing:.08em}
+  body.mk-subpage > header .header-tag{font-size:10px;letter-spacing:.12em}
+}
+@media(max-width:1360px){
+  body.mk-subpage > header .header-actions{margin-left:auto}
+  body.mk-subpage > header .menu-panel:not([hidden]){position:absolute;left:0;right:0;top:100%;max-height:calc(100dvh - 74px);overflow-y:auto;box-shadow:0 20px 40px #0009}
+  body.mk-subpage > header .menu-panel-inner{width:min(1060px,94vw);margin:auto;padding:10px 12px 22px}
+  body.mk-subpage > header .menu-panel a{padding:11px 4px;font-size:12px}
 }
