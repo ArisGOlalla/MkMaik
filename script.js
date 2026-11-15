@@ -7,6 +7,19 @@ const allAudios = [...document.querySelectorAll('audio')];
 function enter(play){ entry.classList.add('hidden'); if(play){ intro.volume=.45; intro.play().catch(()=>{}); muteBtn.textContent='▮▮'; } }
 enterMusic.addEventListener('click',()=>enter(true));
 enterSilent.addEventListener('click',()=>enter(false));
+/* A direct section link must bypass the full-screen music welcome.
+   Example: The Story in the navigation points to #origen. */
+(() => {
+  const targetId = decodeURIComponent(window.location.hash.slice(1));
+  if (!targetId || !document.getElementById(targetId) || !entry) return;
+  entry.classList.add('hidden');
+  // Avoid autoplay when visiting a deep link; align below the fixed header.
+  requestAnimationFrame(() => {
+    const target = document.getElementById(targetId);
+    if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+  });
+})();
+
 muteBtn.addEventListener('click',()=>{ if(intro.paused){ intro.play().catch(()=>{}); muteBtn.textContent='▮▮'; } else { intro.pause(); muteBtn.textContent='▶'; }});
 allAudios.forEach(a=>a.addEventListener('play',()=>{ allAudios.forEach(b=>{if(b!==a)b.pause()}); if(a!==intro) intro.pause(); }));
 
