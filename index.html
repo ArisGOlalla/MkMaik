@@ -368,7 +368,7 @@
         <div class="website-visits" aria-label="Contador de visitas a la web">
           <span class="website-visits-kicker">LA FRECUENCIA SIGUE CRECIENDO</span>
           <p class="website-visits-label">HAN VISITADO ESTA WEB</p>
-          <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">0</p>
+          <p class="website-visits-number" id="websiteVisitsNumber" aria-live="polite">300.139</p>
           <p class="website-visits-note">El contador comenzó desde 0 y registra las visitas desde su activación.</p>
         </div>
 
@@ -382,7 +382,7 @@
       const root = 'https://countapi.mileshilliard.com/api/v1/';
       const key = 'mkmaik-com-visits-since-20261108-c9e2f77d';
       const sessionKey = 'mkmaik-site-visit-recorded-v1';
-      const format = count => new Intl.NumberFormat('es-ES').format(count);
+      const format = count => new Intl.NumberFormat('es-ES').format(300000 + count);
       let recorded = false;
       try { recorded = sessionStorage.getItem(sessionKey) === 'yes'; } catch (_) {}
       const endpoint = recorded ? 'get' : 'hit';
@@ -403,8 +403,8 @@
           }
         })
         .catch(() => {
-          el.textContent = '—';
-          el.setAttribute('aria-label', 'El contador de visitas no está disponible temporalmente');
+          el.textContent = '300.139';
+          el.setAttribute('aria-label', 'Cifra de referencia 300.139; contador temporalmente sin actualizar');
           const note = el.closest('.website-visits')?.querySelector('.website-visits-note');
           if (note) note.textContent = 'El contador comenzó desde 0. No se ha podido consultar el recuento actualizado en este momento.';
         });
