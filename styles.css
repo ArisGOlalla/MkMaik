@@ -1368,3 +1368,7 @@ label[for="telefono"]{
     letter-spacing:.1em;text-transform:uppercase
   }
 }
+
+/* Ensure direct links to story and other sections remain visible below the fixed top bar. */
+html{scroll-padding-top:86px}
+main section[id]{scroll-margin-top:86px}
