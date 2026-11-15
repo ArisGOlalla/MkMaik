@@ -1,0 +1,175 @@
+/* MK MAIK — shared visual language for secondary pages, ES + EN.
+   Intentionally scoped: home layout, artwork, media, and page sections remain untouched. */
+body.mk-subpage{
+  --mk-gold:#c9972f;
+  --mk-ink:#111214;
+  --mk-cream:#f7f2e8;
+  font-family:Inter,system-ui,Arial,sans-serif;
+}
+body.mk-subpage > header,
+body.mk-subpage > header.site-header{
+  min-height:74px;
+  background:rgba(20,22,24,.96);
+  border-bottom:1px solid rgba(201,151,47,.26);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  z-index:60;
+}
+body.mk-subpage .header-inner,
+body.mk-subpage > header .nav{
+  width:100%;
+  max-width:none;
+  min-height:74px;
+  padding:0 clamp(16px,2.4vw,36px);
+  display:flex;
+  align-items:center;
+  gap:clamp(12px,1.8vw,26px);
+}
+body.mk-subpage > header .brand,
+body.mk-subpage > header .logo{
+  flex:0 0 auto;
+  color:var(--mk-gold);
+  font-family:Cinzel,serif;
+  font-size:28px;
+  font-weight:900;
+  line-height:.85;
+  text-decoration:none;
+  letter-spacing:0;
+}
+body.mk-subpage > header .brand small,
+body.mk-subpage > header .logo span{
+  display:block;
+  color:var(--mk-gold);
+  font-family:Cinzel,serif;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.36em;
+  padding:0;
+  margin-top:4px;
+}
+body.mk-subpage > header .desktop-nav{
+  min-width:0;
+  flex:1 1 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(11px,1.3vw,22px);
+}
+body.mk-subpage > header .desktop-nav a{
+  color:#e7e0cf;
+  white-space:nowrap;
+  text-decoration:none;
+  text-transform:uppercase;
+  font:800 clamp(10px,.70vw,12px)/1.5 Inter,Arial,sans-serif;
+  letter-spacing:.115em;
+}
+body.mk-subpage > header .desktop-nav a[aria-current="page"],
+body.mk-subpage > header .desktop-nav a:hover{
+  color:#e6bb56;
+}
+body.mk-subpage > header .desktop-nav a[lang]{
+  border:1px solid rgba(201,151,47,.45);
+  border-radius:3px;
+  color:#edc879;
+  padding:8px 10px;
+}
+body.mk-subpage > header .header-actions,
+body.mk-subpage > header .nav-actions{
+  flex:0 0 auto;
+  margin-left:auto;
+}
+body.mk-subpage > header .menu-toggle,
+body.mk-subpage > header .nav-mobile,
+body.mk-subpage > header .mobile-nav-toggle{
+  border:1px solid var(--mk-gold);
+  border-radius:4px;
+  background:#161616;
+  color:#f1ca70;
+  font:800 12px/1 Inter,Arial,sans-serif;
+  letter-spacing:.08em;
+  min-height:43px;
+  padding:11px 13px;
+}
+body.mk-subpage > header .menu-panel,
+body.mk-subpage > header .mobile-menu,
+body.mk-subpage > header .mobile-site-nav{
+  background:#101113;
+  border-top:1px solid rgba(201,151,47,.26);
+}
+body.mk-subpage > header .menu-panel a,
+body.mk-subpage > header .mobile-menu a,
+body.mk-subpage > header .mobile-site-nav a{
+  color:#f4ead5;
+}
+body.mk-subpage .language-switch button.active,
+body.mk-subpage .lang-switch button.active{
+  background:var(--mk-gold);
+  color:#14110b;
+}
+body.mk-subpage .menu-toggle:focus-visible,
+body.mk-subpage .nav-mobile:focus-visible,
+body.mk-subpage .mobile-nav-toggle:focus-visible,
+body.mk-subpage > header a:focus-visible{
+  outline:2px solid #f3d78f;
+  outline-offset:3px;
+}
+body.mk-subpage footer{
+  border-top:1px solid rgba(201,151,47,.3);
+}
+body.mk-subpage footer a:hover{
+  color:#f1ca70;
+}
+@media(min-width:1361px){
+  body.mk-subpage > header .menu-toggle,
+  body.mk-subpage > header .nav-mobile,
+  body.mk-subpage > header .mobile-nav-toggle{display:none!important}
+  body.mk-subpage > header .desktop-nav{display:flex!important}
+  body.mk-subpage > header .mobile-site-nav,
+  body.mk-subpage > header .mobile-menu,
+  body.mk-subpage > header .menu-panel[hidden]{display:none!important}
+}
+@media(max-width:1360px){
+  body.mk-subpage > header .desktop-nav{display:none!important}
+  body.mk-subpage > header .menu-toggle,
+  body.mk-subpage > header .nav-mobile,
+  body.mk-subpage > header .mobile-nav-toggle{display:inline-flex!important}
+  body.mk-subpage > header .mobile-site-nav[hidden],
+  body.mk-subpage > header .mobile-menu[hidden],
+  body.mk-subpage > header .menu-panel[hidden]{display:none!important}
+  body.mk-subpage > header .mobile-site-nav:not([hidden]){
+    display:flex!important;
+    position:absolute;
+    left:0;right:0;top:100%;
+    flex-direction:column;
+    gap:0;
+    max-height:calc(100dvh - 74px);
+    overflow-y:auto;
+    padding:10px 18px 22px;
+    background:#101113;
+    border-top:1px solid rgba(201,151,47,.26);
+    box-shadow:0 20px 40px #0009;
+  }
+  body.mk-subpage > header .mobile-menu:not([hidden]){display:block!important}
+  body.mk-subpage > header .menu-panel:not([hidden]){display:block!important}
+  body.mk-subpage > header .nav{justify-content:space-between}
+  body.mk-subpage > header .header-tag{display:none}
+}
+@media(max-width:760px){
+  body.mk-subpage .header-inner,
+  body.mk-subpage > header .nav{padding-inline:16px}
+  body.mk-subpage > header .brand,
+  body.mk-subpage > header .logo{font-size:24px}
+}
+
+/* Keep menus within the usable width at intermediate desktop breakpoints. */
+@media(min-width:1361px){
+  body.mk-subpage > header .desktop-nav{gap:clamp(8px,.95vw,16px)}
+  body.mk-subpage > header .desktop-nav a{font-size:clamp(9px,.65vw,11px);letter-spacing:.08em}
+  body.mk-subpage > header .header-tag{font-size:10px;letter-spacing:.12em}
+}
+@media(max-width:1360px){
+  body.mk-subpage > header .header-actions{margin-left:auto}
+  body.mk-subpage > header .menu-panel:not([hidden]){position:absolute;left:0;right:0;top:100%;max-height:calc(100dvh - 74px);overflow-y:auto;box-shadow:0 20px 40px #0009}
+  body.mk-subpage > header .menu-panel-inner{width:min(1060px,94vw);margin:auto;padding:10px 12px 22px}
+  body.mk-subpage > header .menu-panel a{padding:11px 4px;font-size:12px}
+}
