@@ -382,7 +382,7 @@
       const root = 'https://countapi.mileshilliard.com/api/v1/';
       const key = 'mkmaik-com-visits-since-20261108-c9e2f77d';
       const sessionKey = 'mkmaik-site-visit-recorded-v1';
-      const format = count => new Intl.NumberFormat('es-ES').format(300000 + count);
+      const format = count => new Intl.NumberFormat('es-ES').format(Math.max(300139, 300000 + count));
       let recorded = false;
       try { recorded = sessionStorage.getItem(sessionKey) === 'yes'; } catch (_) {}
       const endpoint = recorded ? 'get' : 'hit';
