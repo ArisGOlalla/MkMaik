@@ -16,7 +16,7 @@ enterSilent.addEventListener('click',()=>enter(false));
   // Avoid autoplay when visiting a deep link; align below the fixed header.
   requestAnimationFrame(() => {
     const target = document.getElementById(targetId);
-    if (target) target.scrollIntoView({ block: 'start', behavior: 'instant' });
+    if (target) target.scrollIntoView({ block: 'start', behavior: 'auto' });
   });
 })();
 
