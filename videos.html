@@ -8,6 +8,9 @@
 <meta name="description" content="Vídeos de MK MAIK: conciertos en directo, entrevistas y apariciones en TVG, Telecinco, Antena 3, Canal 4 y Visión Latina. Explora su videoteca oficial.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://www.mkmaik.com/videos.html">
+<link rel="alternate" hreflang="es" href="https://www.mkmaik.com/videos.html">
+<link rel="alternate" hreflang="en" href="https://www.mkmaik.com/videos-en.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mkmaik.com/videos.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vídeos de MK MAIK | Conciertos, entrevistas y televisión">
 <meta property="og:description" content="Conciertos, entrevistas y apariciones en televisión de MK MAIK.">
@@ -37,10 +40,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(9,9,11,.95);backdrop-fil
   "url": "https://www.mkmaik.com/videos.html",
   "name": "Vídeos de MK MAIK | Conciertos, entrevistas y televisión",
   "description": "Vídeos y publicaciones de MK MAIK: música en directo, entrevistas y televisión.",
-  "inLanguage": [
-    "es",
-    "en"
-  ],
+  "inLanguage": "es",
   "isPartOf": {
     "@type": "WebSite",
     "name": "MK MAIK",
@@ -188,7 +188,7 @@ en:{discographyNav:"DISCOGRAPHY",originNav:"THE ORIGIN",eventsNav:"EVENTS",press
 };
 let lang='es';const toggle=document.getElementById('menuToggle'),menu=document.getElementById('mobileNav');
 function render(){document.documentElement.lang=lang;document.title=lang==='es'?'Vídeos de MK MAIK | Conciertos, entrevistas y televisión':'MK MAIK Videos | Concerts, interviews and television';document.querySelectorAll('[data-t]').forEach(el=>{const val=dict[lang][el.dataset.t];if(val)el.textContent=val});document.querySelectorAll('[data-lang]').forEach(btn=>{let selected=btn.dataset.lang===lang;btn.classList.toggle('active',selected);btn.setAttribute('aria-pressed',String(selected))});toggle.textContent=menu.hidden?dict[lang].menu:dict[lang].close;}
-document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{lang=btn.dataset.lang;render()}));
+document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{if(btn.dataset.lang==='en')window.location.href='videos-en.html';}));
 toggle.addEventListener('click',()=>{menu.hidden=!menu.hidden;toggle.setAttribute('aria-expanded',String(!menu.hidden));render()});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.hidden=true;toggle.setAttribute('aria-expanded','false');render()}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){menu.hidden=true;toggle.setAttribute('aria-expanded','false');render();toggle.focus()}});

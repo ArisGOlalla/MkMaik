@@ -7,6 +7,9 @@
 <title>Discografía de MK MAIK | 18 canciones y música oficial</title>
 <meta name="description" content="Escucha y descubre las 18 canciones de MK MAIK. Explora su discografía, sus temas Frecuencia, ROSÉ y One Of One, y escucha su música en Spotify.">
 <link rel="canonical" href="https://www.mkmaik.com/discografia.html">
+<link rel="alternate" hreflang="es" href="https://www.mkmaik.com/discografia.html">
+<link rel="alternate" hreflang="en" href="https://www.mkmaik.com/discography-en.html">
+<link rel="alternate" hreflang="x-default" href="https://www.mkmaik.com/discografia.html">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MK MAIK">
@@ -37,10 +40,7 @@
   "url": "https://www.mkmaik.com/discografia.html",
   "name": "Discografía de MK MAIK | 18 canciones",
   "description": "Discografía oficial de MK MAIK con una selección de dieciocho canciones.",
-  "inLanguage": [
-    "es",
-    "en"
-  ],
+  "inLanguage": "es",
   "isPartOf": {
     "@type": "WebSite",
     "url": "https://www.mkmaik.com/",
@@ -151,7 +151,7 @@ en:{homeNav:"HOME",musicNav:"MUSIC",originNav:"THE ORIGIN",eventsNav:"EVENTS",pr
 let lang='es';
 function render(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(dict[lang][key])el.textContent=dict[lang][key]});toggle.textContent=panel.hidden?dict[lang].menu:dict[lang].close;document.querySelectorAll('[data-lang]').forEach(b=>{const active=b.dataset.lang===lang;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});sync();}
 function openMenu(visible){panel.hidden=!visible;toggle.setAttribute('aria-expanded',String(visible));toggle.textContent=visible?dict[lang].close:dict[lang].menu;}
-toggle.addEventListener('click',()=>openMenu(panel.hidden));panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>openMenu(false)));document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;render();}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){openMenu(false);toggle.focus()}});
+toggle.addEventListener('click',()=>openMenu(panel.hidden));panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>openMenu(false)));document.querySelectorAll('[data-lang]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.lang==='en')window.location.href='discography-en.html';}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden){openMenu(false);toggle.focus()}});
 const players=[...document.querySelectorAll('.song-play')].map(button=>{const audio=new Audio(button.dataset.audio);audio.preload='metadata';const duration=button.closest('.song').querySelector('.song-duration');function format(s){const n=Math.floor(s);return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')}audio.addEventListener('loadedmetadata',()=>{if(Number.isFinite(audio.duration)&&audio.duration>0)duration.textContent=format(audio.duration)});audio.addEventListener('error',()=>{duration.textContent='—'});return {button,audio}});
 function sync(){players.forEach(({button,audio})=>{const playing=!audio.paused&&!audio.ended;button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?dict[lang].pause:dict[lang].play)+' '+button.closest('.song').querySelector('strong').textContent);button.querySelector('span').textContent=playing?'Ⅱ':'▶'})}
 players.forEach(({button,audio})=>{button.addEventListener('click',()=>{if(audio.paused){players.forEach(p=>{if(p.audio!==audio)p.audio.pause()});audio.play().catch(()=>sync())}else audio.pause()});audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',sync)});
