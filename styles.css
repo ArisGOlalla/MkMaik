@@ -1293,3 +1293,36 @@ label[for="telefono"]{
 .media-logo-band{width:100%;background:#000;overflow:hidden;padding:0;margin:0}
 .media-logo-band .media-logo-marquee{margin:0;padding:18px 0;border:0;box-shadow:none;border-radius:0}
 @media(max-width:760px){.media-logo-band .media-logo-marquee{margin:0;padding:10px 0}}
+
+/* Navegación móvil unificada — escritorio intacto */
+.mobile-nav-toggle,.mobile-site-nav{display:none}
+@media(max-width:760px){
+  .topbar{padding:0 16px;gap:10px;z-index:60}
+  .topbar .brand{flex:0 0 auto;font-size:24px}
+  .topbar .sound{flex:0 0 auto}
+  .mobile-nav-toggle{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin-left:auto;padding:11px 13px;min-height:44px;
+    border:1px solid #c9972f;border-radius:4px;
+    background:#161616;color:#f1ca70;
+    font:800 12px/1 Inter,Arial,sans-serif;letter-spacing:.08em;
+    white-space:nowrap;cursor:pointer
+  }
+  .mobile-site-nav:not([hidden]){
+    display:flex;position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;gap:0;max-height:calc(100dvh - 74px);
+    overflow:auto;overscroll-behavior:contain;
+    padding:10px 18px 22px;background:#0d0d0f;
+    border-top:1px solid rgba(201,151,47,.3);
+    box-shadow:0 24px 45px rgba(0,0,0,.56);
+  }
+  .topbar .mobile-site-nav a{
+    display:block;padding:14px 10px;min-height:44px;
+    color:#f4ead5;border-bottom:1px solid rgba(201,151,47,.16);
+    font:800 12px/1.5 Inter,Arial,sans-serif;
+    letter-spacing:.1em;text-transform:uppercase
+  }
+  .mobile-nav-toggle:focus-visible,.mobile-site-nav a:focus-visible{
+    outline:2px solid #f1ca70;outline-offset:2px
+  }
+}
