@@ -1326,3 +1326,18 @@ label[for="telefono"]{
     outline:2px solid #f1ca70;outline-offset:2px
   }
 }
+
+
+/* Corrección menú MK MAIK: solo una navegación visible por tamaño de pantalla.
+   Impide que la regla general .topbar nav anule el estado oculto del menú móvil. */
+.topbar .mobile-site-nav,
+.topbar .mobile-site-nav[hidden]{display:none!important}
+@media(min-width:761px){
+  .topbar .desktop-nav{display:flex;align-items:center;gap:clamp(12px,1.4vw,24px);min-width:0}
+  .topbar .desktop-nav a{font-size:clamp(10px,.75vw,12px);white-space:nowrap}
+  .topbar .mobile-nav-toggle{display:none!important}
+}
+@media(max-width:760px){
+  .topbar .desktop-nav{display:none!important}
+  .topbar .mobile-site-nav:not([hidden]){display:flex!important}
+}
